@@ -1,0 +1,1 @@
+C programming language, a compiled programming language, which mainly good for embedded and easy to write. It comprises difference section to learn about. Look that the subdirectories and find the script for diffr=erent tasks.
