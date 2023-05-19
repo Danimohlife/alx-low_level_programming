@@ -1,0 +1,1 @@
+One of the ways in programming is the ability to make different decision at all times and occassions. WHILE & FOR LOOP in going through options and if statement help in the decision making. Go through and see some decision I made through each files
