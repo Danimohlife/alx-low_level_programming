@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - main 4 all
- * Return: 0 success 
+ * Return: 0 success
  */
 int main(void)
 {
