@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * print_sign - sign func
+ * @n: argu
  * Return: 1 / 0 / -1
  */
 int print_sign(int n)
