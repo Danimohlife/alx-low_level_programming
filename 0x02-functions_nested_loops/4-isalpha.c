@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * _isalpha - funct alpha
+ * @c: argu
  * Return: 1 / 0
  */
 int _isalpha(int c)
