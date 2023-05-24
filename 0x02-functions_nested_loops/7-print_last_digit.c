@@ -13,7 +13,12 @@ int print_last_digit(int n)
 		n = -n;
 	}
 
-	if (n > 9)
+	if (n >= 0 && n <= 9)
+	{
+		s = n;
+		_putchar(s + '0');
+	}
+	else if (n > 9)
 	{
 		s = n % 10;
 		_putchar(s + '0');
@@ -29,11 +34,6 @@ int print_last_digit(int n)
 		n = n / 10;
 		n = n / 10;
 		s = n % 10;
-		_putchar(s + '0');
-	}
-	else if (n >= 0 && n <= 9)
-	{
-		s = n;
 		_putchar(s + '0');
 	}
 	return (s);
