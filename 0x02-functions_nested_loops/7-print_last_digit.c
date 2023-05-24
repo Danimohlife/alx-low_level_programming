@@ -1,5 +1,4 @@
-#include <limits.h>
-#include <stdio.h>
+#include "main.h"
 /**
  * print_last_digit - I dey your back please
  * @n: aurg
