@@ -33,7 +33,7 @@ int print_last_digit(int n)
 	}
 	else
 	{
-		s = n;
+		s = n % 10;
 		_putchar(s + '0');
 	}
 	return (s);
