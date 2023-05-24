@@ -15,7 +15,6 @@ int print_last_digit(int n)
 
 	if (n >= 0 && n <= 9)
 	{
-		n = n / 10;
 		s = n;
 		_putchar(s + '0');
 	}
