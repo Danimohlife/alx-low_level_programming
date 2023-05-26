@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * _isdigit - give me a number
  * @c: watch for number
@@ -6,7 +7,7 @@
  */
 int _isdigit(int c)
 {
-	if (atoi(c))
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
