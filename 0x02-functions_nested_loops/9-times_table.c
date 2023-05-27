@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * times_table - of 9s
  * Return: nothing
