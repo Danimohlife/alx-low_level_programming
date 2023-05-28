@@ -13,9 +13,7 @@ void print_times_table(int n)
 		for (j = 0; j <= n; j++)
 		{
 			k = i * j;
-			if (n > 15 || n < 0)
-				break;
-			else
+			if (n <= 15 && n > 0)
 			{
 				if (k <= 99 && k != 0)
 				{
@@ -39,11 +37,19 @@ void print_times_table(int n)
 				}
 				else
 				{
+					if (k != 0)
+						_putchar(' ');
 					_putchar((k % 10) + '0');
+					if (i == 0 && k == 0 && j != n)
+					{
+						_putchar(',');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+					}
 				}
 			}
 		}
 		_putchar('\n');
-
 	}
 }
