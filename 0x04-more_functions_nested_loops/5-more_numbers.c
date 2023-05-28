@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * more_numbers - num
- * Return: non
+ * Return: nothin
  */
-void more_number(void)
+void more_numbers(void)
 {
 	int i, j;
 
