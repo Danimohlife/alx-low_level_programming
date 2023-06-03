@@ -5,21 +5,20 @@
  */
 int main(void)
 {
-	int i, j = 1;
+	int i;
+	long long int j = 0; 
 
-	for (i = 1; i < 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		if (i < 2)
 		{
 			printf("%d, ", i);
-			printf("%d, ", j += i);
+			j = i;
+			j += i;
+			printf("%d", j);
 		}
-		else if (i < 49 && i > 1)
-		{
-			printf("%d, ", j += i);
-		}
-		else 
-			printf("%d\n", j += i);
+		printf("%d, ", i);
 	}
+	printf("\n");
 	return (0);
 }
