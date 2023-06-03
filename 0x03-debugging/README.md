@@ -1,0 +1,1 @@
+Debugging act of talk to yourself about your code that seem working but don't know why it is working. One could also be talking to oneself because your code isn't working. Yes thank you, it is == MADNESS.
