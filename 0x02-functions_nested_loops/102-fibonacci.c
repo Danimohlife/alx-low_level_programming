@@ -6,24 +6,24 @@
 int main(void)
 {
 	int i;
-	long long int j = 1, k = 1, l;
+	unsigned long int j = 1, k = 1, l;
 
 	for (i = 1; i <= 50; i++)
 	{
 		if (i == 1)
-			printf("%lld, ", j);
+			printf("%ld, ", j);
 		else if (1 == 2)
 		{
 			k = j + k;
-			printf("%lld, ", k);
+			printf("%ld, ", k);
 		}
 		else
 		{
 			l = j + k;
 			if (i != 50)
-				printf("%lld, ", l);
+				printf("%ld, ", l);
 			else
-				printf("%lld", l);
+				printf("%ld", l);
 			j = k;
 			k = l;
 		}
