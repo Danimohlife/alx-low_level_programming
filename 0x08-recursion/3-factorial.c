@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * factorial - facorial pt
- * @s: pointer strng
+ * @n: pointer strng
  * Return: 0
  */
 int factorial(int n)
@@ -10,5 +10,5 @@ int factorial(int n)
 		return (-1);
 	if (n == 0)
 		return (1);
-	return(n * factorial(n -1));
+	return (n * factorial(n - 1));
 }
