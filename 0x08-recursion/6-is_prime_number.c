@@ -22,5 +22,5 @@ int isPrime(int n, int divisor)
  */
 int is_prime_number(int n)
 {
-	return isPrime(n, 2);
+	return (isPrime(n, 2));
 }
