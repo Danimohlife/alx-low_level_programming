@@ -1,0 +1,1 @@
+About static AND shared library. It go deep on share programme like printf functions in the c programming stardard hearder. THis library helps in reducing make file, that is by sharing code into different source file. 
