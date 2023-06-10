@@ -5,24 +5,21 @@
  */
 int main(void)
 {
-    int previousNum = 1;
-    int currentNum = 2;
-    int sumEven = 0;
+	int previousNum = 1, nextNum;
+	int currentNum = 2;
+	int sumEven = 0;
 
-    while (currentNum <= 4000000)
-    {
-        if (currentNum % 2 == 0)
-        {
-            sumEven += currentNum;
-        }
+	while (currentNum <= 4000000)
+	{
+		if (currentNum % 2 == 0)
+		{
+			sumEven += currentNum;
+		}
 
-        int nextNum = previousNum + currentNum;
-        previousNum = currentNum;
-        currentNum = nextNum;
-    }
-
-    printf("The sum of even-valued terms: %d\n", sumEven);
-
-    return 0;
+		nextNum = previousNum + currentNum;
+		previousNum = currentNum;
+		currentNum = nextNum;
+	}
+	printf("The sum of even-valued terms: %d\n", sumEven);
+	return (0);
 }
-
