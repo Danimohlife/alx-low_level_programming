@@ -20,6 +20,6 @@ int main(void)
 		previousNum = currentNum;
 		currentNum = nextNum;
 	}
-	printf("The sum of even-valued terms: %d\n", sumEven);
+	printf("%d\n", sumEven);
 	return (0);
 }
