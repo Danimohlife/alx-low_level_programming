@@ -24,22 +24,22 @@ int main(int argc, char *argv[])
 	while (i >= 0)
 	{
 		if (i >= 25)
-			i -= 25;
+			i = i - 25;
 
 		else if (i >= 10)
-			i -= 10;
+			i = i - 10;
 
 		else if (i >= 5)
-			i -= 5;
+			i = i - 5;
 
 		else if (i >= 2)
-			i -= 2;
+			i = i - 2;
 
 		else if (i >= 1)
-			i -= 1;
+			i = i - 1;
 		else
 			break;
-		change += 1;
+		change = change + 1;
 	}
 	printf("%d\n", change);
 	return (0);
