@@ -1,7 +1,7 @@
 #include "dog.h"
 /**
  * free_dog - free dog memory
- * @d: pointer 
+ * @d: pointer
  */
 void free_dog(dog_t *d)
 {
