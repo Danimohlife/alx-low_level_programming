@@ -9,9 +9,14 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == NULL || f == NULL)
-	{
-		return;
-	}
 	f(name);
+}
+void print(char *name)
+{
+	while (*name != '\0')
+	{
+		_putchar(*name);
+		name++;
+	}
+	_putchar('\n');
 }
