@@ -1,56 +1,39 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include "main.h"
 /**
- * multiply - Multiplies two positive numbers
- * @num1: First number
- * @num2: Second number
- *
- * Return: Result of the multiplication
+ * is_valid_number - cheacking if num
+ * @str: point to incoming argu
+ * Return: 1
  */
-int multiply(int num1, int num2)
+int is_valid_number(char *str)
 {
-	return (num1 * num2);
+	while (*str)
+	{
+		if (!isdigit(*str))
+			return (0);
+		str++;
+	}
+	return (1);
 }
 /**
- * main - Entry point of the program
- * @argc: Number of command-line arguments
- * @argv: Array of command-line arguments
- *
- * Return: 0 on success, 98 on error
+ * main - function main
+ * @argc: first argument
+ * @argv: sec argment
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
-
-    /* Check the number of arguments */
 	if (argc != 3)
 	{
-		printf("Error\n");
+		_putchar('E');
+		_putchar('r');
+		_putchar('r');
+		_putchar('o');
+		_putchar('r');
+		_putchar('\n');
 		return (98);
 	}
-
-    /* Check if arguments contain only digits */
-	for (int i = 1; i < argc; i++)
-	{
-		for (int j = 0; argv[i][j] != '\0'; j++)
-		{
-			if (!isdigit(argv[i][j]))
-			{
-				printf("Error\n");
-				return (98);
-			}
-		}
-	}
-
-    /* Convert arguments to integers */
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[2]);
-
-    /* Perform multiplication */
-	result = multiply(num1, num2);
-
-    /* Print the result */
-	printf("%d\n", result);
+	multiply_numbers(argv[1], argv[2]);
 	return (0);
 }
