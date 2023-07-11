@@ -1,67 +1,56 @@
 #include "main.h"
 /**
- * error_exit - message and exits the program with the specified code.
- * @message: The error message to print.
- * @code: The exit code.
+ * error_exit - display error
+ * @message: do.kll
+ * Return: VOID
  */
-void error_exit(const char *message, int code)
+void error_exit(const char *message)
 {
-	dprintf(STDERR_FILENO, "%s\n", message);
-	exit(code);
+	perror(message);
+	exit(EXIT_FAILURE);
 }
-
 /**
- * copy_file - Copies the content of one file to another file.
- * @file_from: The name of the source file.
- * @file_to: The name of the destination file.
+ * copy_file - FROM_TO TO FUNC
+ * @file_from: surce whre to copy from
+ * @file_to: buff to coppy to
+ * Return: void funct
  */
 void copy_file(const char *file_from, const char *file_to)
 {
 	int fd_from, fd_to;
 	char buffer[BUFFER_SIZE];
-	ssize_t bytesRead, bytesWritten;
+	ssize_t bytes_read, bytes_written;
 
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
-		error_exit("Error: Can't read from file", 98);
+		error_exit("Error: Can't read from file");
+
 
 	fd_to = open(file_to, O_WRONLY | O_CREAT |
-			O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
 	if (fd_to == -1)
+		error_exit("Error: Can't write to file");
+
+	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
-		close(fd_from);
-		error_exit("Error: Can't write to file", 99);
+		bytes_written = write(fd_to, buffer, bytes_read);
+		if (bytes_written == -1)
+			error_exit("Error: Can't write to file");
 	}
 
-	while ((bytesRead = read(fd_from, buffer, BUFFER_SIZE)) > 0)
-	{
-		bytesWritten = write(fd_to, buffer, bytesRead);
-		if (bytesWritten == -1)
-		{
-			close(fd_from);
-			close(fd_to);
-			error_exit("Error: Can't write to file", 99);
-		}
-	}
-	if (bytesRead == -1)
-	{
-		close(fd_from);
-		close(fd_to);
-		error_exit("Error: Can't read from file", 98);
-	}
+	if (bytes_read == -1)
+		error_exit("Error: Can't read from file");
 
 	if (close(fd_from) == -1)
-		error_exit("Error: Can't close fd", 100);
-
+		error_exit("Error: Can't close fd");
 	if (close(fd_to) == -1)
-		error_exit("Error: Can't close fd", 100);
+		error_exit("Error: Can't close fd");
 }
-
 /**
- * main - entry point of the program.
- * @argc: The number of command-line arguments.
- * @argv: An array of strings containing the command-line arguments.
- * Return: 0 on success.
+ * main - starting point
+ * @argc: num of argurment
+ * @argv: string of arg
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
@@ -69,7 +58,11 @@ int main(int argc, char *argv[])
 	const char *file_to;
 
 	if (argc != 3)
-		error_exit("Usage: cp file_from file_to", 97);
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		return (97);
+	}
+
 
 	file_from = argv[1];
 	file_to = argv[2];
@@ -78,3 +71,4 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+
