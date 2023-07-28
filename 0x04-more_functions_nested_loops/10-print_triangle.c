@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * print_triangle - try angle
  * @size: KG KM
