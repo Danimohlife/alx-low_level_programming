@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * print_triangle - try angle
  * @size: KG KM
@@ -9,7 +8,7 @@ void print_triangle(int size)
 	int i, j;
 
 	if (size <= 0)
-		putchar('\n');
+		_putchar('\n');
 	else
 	{
 		for (i = 1; i <= size; i++)
@@ -17,11 +16,11 @@ void print_triangle(int size)
 			for (j = 0; j < size; j++)
 			{
 				if (j + i < size)
-					putchar(' ');
+					_putchar(' ');
 				else
-					putchar('#');
+					_putchar('#');
 			}
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
