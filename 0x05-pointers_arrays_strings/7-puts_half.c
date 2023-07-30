@@ -13,8 +13,8 @@ void puts_half(char *str)
 		k++;
 	}
 	j = k / 2;
-	if (k % 2 == 1)
-		j += 1;
+	/*if (k % 2 == 1)
+		j += 1*/
 	for (i = 0; i < j; i++)
 	{
 		_putchar(str[k / 2 + i]);
