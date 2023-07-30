@@ -10,7 +10,7 @@ void print_array(int *a, int b)
 {
 	int c;
 
-	for (c = 0; c <= b - 1; c++)
+	for (c = 0; c <= b - 1 || b < 0; c++)
 	{
 		if (c < b - 1)
 			printf("%d, ", a[c]);
