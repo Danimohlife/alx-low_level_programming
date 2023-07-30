@@ -10,7 +10,7 @@ void print_array(int *a, int b)
 {
 	int c;
 
-	if(b < 0)
+	if (b < 0)
 	{
 		printf("\n");
 		break;
