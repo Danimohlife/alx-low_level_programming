@@ -13,10 +13,8 @@ void print_array(int *a, int b)
 	if (b < 0)
 		printf("\n");
 
-	for (c = 0; c <= b - 1 || b < 0; c++)
+	for (c = 0; c <= b - 1; c++)
 	{
-		if (b < 0)
-			break;
 		if (c == b)
 			printf("%d\n", a[c]);
 		else
