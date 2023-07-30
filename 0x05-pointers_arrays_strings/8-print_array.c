@@ -11,11 +11,13 @@ void print_array(int *a, int b)
 	int c;
 
 	if (b < 0)
+	{
 		printf("\n");
+	}
 
 	for (c = 0; c <= b - 1; c++)
 	{
-		if (c == b)
+		if (c == b - 1)
 			printf("%d\n", a[c]);
 		else
 			printf("%d, ", a[c]);
