@@ -12,6 +12,11 @@ void print_array(int *a, int b)
 
 	for (c = 0; c <= b - 1 || b < 0; c++)
 	{
+		if (b < 0)
+		{
+			printf("\n");
+			break;
+		}
 		if (c < b - 1)
 			printf("%d, ", a[c]);
 		else
