@@ -2,6 +2,7 @@
  * _strncat - string with nth concat
  * @dest: Desstination buffer/ file
  * @src: source file
+ * @n: num to cpy
  * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
