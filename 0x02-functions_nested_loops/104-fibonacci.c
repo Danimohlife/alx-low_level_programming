@@ -1,25 +1,23 @@
 #include "main.h"
 /**
- * main - main 4 all
- * Return: 0 on successs
+ * main - main funct
+ * Return: 0
  */
 int main(void)
 {
-	int previousNum = 1, nextNum;
-	int currentNum = 1;
-	int sumEven = 0;
-
-	while (currentNum <= 98)
+	unsigned int fib1 = 1;
+	unsigned int fib2 = 2;
+	
+	printf("%u, %u", fib1, fib2);
+	
+	for (int i = 2; i < 98; i++)
 	{
-		if (currentNum == 0)
-		{
-			sumEven += currentNum;
-		}
-
-		nextNum = previousNum + currentNum;
-		previousNum = currentNum;
-		currentNum = nextNum;
+		unsigned int fibNext = fib1 + fib2;
+		printf(", %u", fibNext);
+		
+		fib1 = fib2;
+		fib2 = fibNext;
 	}
-	printf("%d\n", sumEven);
+	printf("\n");
 	return (0);
 }
